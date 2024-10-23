@@ -1,0 +1,2 @@
+# pinterest-album-fetcher
+:money:
