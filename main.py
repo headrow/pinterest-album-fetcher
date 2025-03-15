@@ -81,7 +81,7 @@ def get_album(id: str, bookmark: str = "", numOfImgs: int = 0):
 
 def find_album():
     link = "https://www.pinterest.com/resource/BoardsResource/get/?data={\"options\":{\"username\":\"" + username + "\"}}"
-    req = requests.get(url=link, cookies={"_pinterest_sess": cookie}, timeout=5)
+    req = requests.get(url=link, cookies={"_pinterest_sess": cookie}, headers={"X-Pinterest-Pws-Handler": "www/[username]/[slug].js"}, timeout=5)
     response = req.json()["resource_response"]
 
     if (req.status_code == 200):
